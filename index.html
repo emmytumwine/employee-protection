@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Protection Insurance</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="employee-protection">
+    <div class="employee-protection-container">
+      <div class="employee-protection-input">
+        <h1 class="heading">Employee Protection Quotation</h1>
+        <form action="" class="employee-protection-form">
+          <label for="statusType">Marital Status:</label>
+          <select name="statusType" id="statusType">
+            <option value="select">...select...</option>
+            <option value="single">Single</option>
+            <option value="married">Married</option>
+            <option value="other">Other</option>
+          </select>
+
+          <label for="numberOfChildren">Number of Children:</label>
+          <input type="number" id="numberOfChildren" min="0">
+
+          <label for="numberOfDirectParents">Number of Direct Parents:</label>
+          <select name="numberOfDirectParents" id="numberOfDirectParents">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+
+          <label for="numberOfDirectParentsInLaw">Number of Direct Parents-in-law:</label>
+          <select name="numberOfDirectParentsInLaw" id="numberOfDirectParentsInLaw">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+
+          <label for="salaryPerMonth">Salary Per Month:</label>
+          <input type="number" id="salaryPerMonth" min="300000">
+
+          <label for="funeral">Funeral:</label>
+          <select name="funeral" id="funeral">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+
+          <label for="savings">Savings:</label>
+          <select name="savings" id="savings">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+
+          <label for="sumInsuredSharedToSpouse">Sum Shared To Spouse:</label>
+          <select name="sumInsuredSharedToSpouse" id="sumInsuredSharedToSpouse">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+
+          <label for="fees">Fees:</label>
+          <input id="feesValue" type="text" readonly value="1850">
+
+          <label for="sumInsuredRate">Sum Insured Rate:</label>
+          <select name="sumInsuredRate" id="sumInsuredRate">
+            <option value="15">15</option>
+            <option value="6">6</option>
+            <option value="12">12</option>
+            <option value="24">24</option>
+          </select>
+
+          <label for="premiumRate">Premium Rate:</label>
+          <select name="premiumRate" id="premiumRate">
+            <option value="5">5</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="10">10</option>
+          </select><br>
+          <button id="calculateButton">Calculate Premium</button>
+        </form>
+      </div>
+      <div class="premium-table" id="premiumTable">
+        <h1 class="heading">Insurance Premium</h1>
+        <div class="grid-layout">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Premium</th>
+                <th>Monthly</th>
+                <th>Annual</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Risk Premium</td>
+                <td id="riskPremiumMonthly"></td>
+                <td id="riskPremiumAnnual"></td>
+              </tr>
+              <tr>
+                <td>Saving Premium</td>
+                <td id="savingPremiumMonthly"></td>
+                <td id="savingPremiumAnnual"></td>
+              </tr>
+              <tr>
+                <td>Total Premium</td>
+                <td id="totalPremiumMonthly"></td>
+                <td id="totalPremiumAnnual"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="cover-table" id="coverTable">
+        <div class="table-1">
+          <h1 class="heading">Covers & Sums Assured</h1>
+          <div class="grid-layout">
+            <table>
+              <thead>
+                <tr>
+                  <th>Coverage Type</th>
+                  <th>PolicyHolder Sum Assured</th>
+                  <th>Spouse Sum Assured</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Death</td>
+                  <td id="deathCover"></td>
+                  <td id="deathSpouse"></td>
+                </tr>
+                <tr>
+                  <td>Permanent Disability</td>
+                  <td id="permanentDisabilityCover"></td>
+                  <td id="permanentDisabilitySpouse"></td>
+                </tr>
+                <tr>
+                  <td>Loss of Revenue</td>
+                  <td id="lossOfRevenueCover"></td>
+                  <td id="lossOfRevenueSpouse"></td>
+                </tr>
+                <tr>
+                  <td>Funeral Fees</td>
+                  <td id="funeralFeeCover"></td>
+                  <td id="funeralFeeSpouse"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
